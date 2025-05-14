@@ -22,7 +22,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: White
   m_Shader: {fileID: 4800000, guid: 7fae68d2d45ae804a8905bb349751830, type: 3}
-  m_ShaderKeywords: _ENABLEGLOBALSHADOW_ON _ENABLETEXTURE_ON _FAKESHADOWENABLE_ON
+  m_ShaderKeywords: _ENABLEDIFFRACTION_ON _ENABLEGLOBALSHADOW_ON _ENABLETEXTURE_ON
+    _FAKESHADOWENABLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -96,7 +97,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - Boolean_6bed1a9bde7a4597b9dc4a039b4558b3: 0
     - Boolean_86a6a586bd824f8b8db3a3fcb9deea18: 0
@@ -111,7 +111,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EdgeWidth: 0.1
-    - _EnableDiffraction: 0
+    - _EnableDiffraction: 1
     - _EnableGlobalShadow: 1
     - _EnableNoise: 0
     - _EnableTexture: 1

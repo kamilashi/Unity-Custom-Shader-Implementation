@@ -47,7 +47,7 @@ Shader "Unlit/S_Wall"
 
 			[Toggle] _EnableDiffraction("Diffraction", Float) = 0
 			_ColorLightDiffraction("Edge Color", Color) = (1,0.6,0,1)
-			_EdgeWidth("Edge Width",Range(0.01,0.5)) = 0.1
+			_EdgeWidth("Edge Width",Range(0.01,0.5)) = 0.037
 
 			[Toggle] _PatternFadeIn("Pattern Fade-In", Float) = 1
 			_OffsetPFadeIn("Pattern Fade-In Strength", Range(0,5)) = 1
@@ -90,7 +90,7 @@ Shader "Unlit/S_Wall"
 				#define InBasePass
 
 				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-				 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
+				#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
 				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
 				#include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"

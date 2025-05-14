@@ -23,7 +23,7 @@ Shader "Unlit/S_Floor"
 
 		[Toggle] _EnableDiffraction("Diffraction", Float) = 0
 		_ColorLightDiffraction("Edge Color", Color) = (1,0.6,0,1)
-		_EdgeWidth ("Edge Width",Range(0.01,0.5)) = 0.1
+		_EdgeWidth ("Edge Width",Range(0.01,0.5)) = 0.037
 
 		[Toggle] _EnableGlobalShadow("Global Shadow", Float) = 1
 		//[Toggle] _FlipShadowValues("Flip Shadow Values", Float) = 0
