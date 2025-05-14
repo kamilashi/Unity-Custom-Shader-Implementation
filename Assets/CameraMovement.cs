@@ -44,8 +44,8 @@ public class CameraMovement : MonoBehaviour
 
         totalDollyDistance = Mathf.Abs(minDolly) + Mathf.Abs(maxDolly);
 
-        QualitySettings.vSyncCount = 0; // Disable VSync
-        Application.targetFrameRate = 60; // Or your preferred cap
+        QualitySettings.vSyncCount = 0; 
+        Application.targetFrameRate = 60; 
     }
 
     void Update()
@@ -122,5 +122,7 @@ public class CameraMovement : MonoBehaviour
         }
 
         GUI.Label(new Rect(screen_width - element_width - right_screen_offset, screep_pos_y_from_top + ui_element_no++ * vertical_interval, element_width, element_height), "Press H to hide/unhide UI", labelStyle);
+
+        GUI.Label(new Rect(screen_width - element_width - right_screen_offset, screep_pos_y_from_top + ui_element_no++ * vertical_interval, element_width, element_height), "Press W / S to dolly", labelStyle);
     }
 }
