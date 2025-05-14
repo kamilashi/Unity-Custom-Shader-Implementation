@@ -88,6 +88,8 @@ public class CameraMovement : MonoBehaviour
         if(Keyboard.current.hKey.wasPressedThisFrame)
         {
             isUiHidden = !isUiHidden;
+
+            Cursor.visible = !isUiHidden;
         }
     }
 
