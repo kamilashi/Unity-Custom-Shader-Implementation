@@ -43,6 +43,9 @@ public class CameraMovement : MonoBehaviour
         currentDistance = 0.0f;
 
         totalDollyDistance = Mathf.Abs(minDolly) + Mathf.Abs(maxDolly);
+
+        QualitySettings.vSyncCount = 0; // Disable VSync
+        Application.targetFrameRate = 60; // Or your preferred cap
     }
 
     void Update()
