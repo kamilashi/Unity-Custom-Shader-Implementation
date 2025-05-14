@@ -17,18 +17,20 @@ public class CameraMovement : MonoBehaviour
     public float minDolly = -5.0f;
     public float maxDolly = 5.0f;
 
-    public float currentDistance = 0.0f;
+    private float currentDistance = 0.0f;
 
     private Transform target;
     private Quaternion startRotation;
     private Vector3 startPosition;
     private float totalDollyDistance;
 
+    private bool isUiHidden = false;
+    private GUIStyle labelStyle;
+
     void Start()
     {
-        /*Vector3 angles = transform.eulerAngles;
-        x = angles.y;
-        y = angles.x;*/
+        labelStyle = new GUIStyle();
+        labelStyle.normal.textColor = Color.black; // Set your desired font color here
 
         if (target == null)
         {
@@ -79,13 +81,43 @@ public class CameraMovement : MonoBehaviour
                 currentDistance = newDistance;
             }
         }
+
+        if(Keyboard.current.hKey.wasPressedThisFrame)
+        {
+            isUiHidden = !isUiHidden;
+        }
     }
 
     [ContextMenu("Reset")]
     private void Reset()
     {
-        transform.Translate(startPosition - transform.position);
+        transform.position = startPosition;
         transform.rotation = startRotation;
         currentDistance = 0.0f;
+    }
+
+    [ExecuteAlways]
+    private void OnGUI()
+    {
+        if(isUiHidden)
+        {
+            return;
+        }
+
+        float right_screen_offset = 40;
+        float element_width = 170;
+        float element_height = 30;
+        float vertical_interval = 35;
+        float screep_pos_y_from_top = 35;
+        int ui_element_no = 0;
+        float screen_width = Screen.width;
+
+        if (GUI.Button(new Rect(screen_width - element_width - right_screen_offset, screep_pos_y_from_top + ui_element_no++ * vertical_interval, element_width, element_height), "Reset Camera"))
+        {
+            // call event
+            Reset();
+        }
+
+        GUI.Label(new Rect(screen_width - element_width - right_screen_offset, screep_pos_y_from_top + ui_element_no++ * vertical_interval, element_width, element_height), "Press H to hide/unhide UI", labelStyle);
     }
 }
