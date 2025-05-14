@@ -22,8 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Neutral White Cold
   m_Shader: {fileID: 4800000, guid: 7fae68d2d45ae804a8905bb349751830, type: 3}
-  m_ShaderKeywords: _ENABLEGLOBALSHADOW_ON _PATTERNFADEIN_ON _SAMPLEINCLIPSPACE_ON
-    _TEXTURECLIP_ON
+  m_ShaderKeywords: _PATTERNFADEIN_ON _SAMPLEINCLIPSPACE_ON _TEXTURECLIP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -113,7 +112,7 @@ Material:
     - _EdgeWidth: 0.1
     - _EnableAddPassLights: 0
     - _EnableDiffraction: 0
-    - _EnableGlobalShadow: 1
+    - _EnableGlobalShadow: 0
     - _EnableNoise: 0
     - _EnableTexture: 0
     - _FakeShadowEnable: 0
@@ -134,7 +133,7 @@ Material:
     - _OffsetPFadeOut: 0.5
     - _Parallax: 0.02
     - _PatternFadeIn: 1
-    - _ProximityThreshold: 34.4
+    - _ProximityThreshold: 18
     - _ProximityThreshold2: 1
     - _QueueOffset: 0
     - _RadiusPFadeIn: 0
@@ -155,8 +154,8 @@ Material:
     - _TextureOffsetX: 0
     - _TextureOffsetY: 0
     - _TextureScale: 0.32
-    - _ThresholdA: 0.228
-    - _ThresholdB: 0.46
+    - _ThresholdA: 0.385
+    - _ThresholdB: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -168,13 +167,13 @@ Material:
     - Vector3_80fb216cbd6a433498b7667e504efe99: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.9245283, g: 0.84692013, b: 0.7195621, a: 1}
     - _Color: {r: 0.764151, g: 0.21266466, b: 0.21266466, a: 1}
-    - _ColorBaseClose: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorBaseFar: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorBaseClose: {r: 0.7294118, g: 0.9450981, b: 1, a: 1}
+    - _ColorBaseFar: {r: 0.015686275, g: 0.5372549, b: 0.6431373, a: 1}
     - _ColorLightDiffraction: {r: 1, g: 0.6, b: 0, a: 1}
     - _ColorMTextBlack: {r: 0.24528301, g: 0.244126, b: 0.244126, a: 1}
     - _ColorMTextWhite: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorPatternClose: {r: 0.015129937, g: 0.5371128, b: 0.6415094, a: 1}
-    - _ColorPatternFar: {r: 0.86721253, g: 0.8983792, b: 0.9056604, a: 1}
+    - _ColorPatternClose: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorPatternFar: {r: 0.015686275, g: 0.5372549, b: 0.6431373, a: 1}
     - _ColorShadow: {r: 0.7184941, g: 0.732378, b: 0.735849, a: 1}
     - _ColorTint: {r: 0.6969562, g: 0.7682861, b: 0.7735849, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

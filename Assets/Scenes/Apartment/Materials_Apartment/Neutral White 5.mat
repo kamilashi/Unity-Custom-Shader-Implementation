@@ -24,7 +24,6 @@ Material:
   m_Shader: {fileID: 4800000, guid: d148ff19fb1cd6741b7cb06511be9bae, type: 3}
   m_ShaderKeywords: _ENABLEADDPASSLIGHTS_ON _ENABLEGLOBALSHADOW_ON _ENABLENOISE_ON
     _ENABLETEXTURE_ON _FAKESHADOWENABLE_ON _FLIPSHADOWVALUES_ON _PATTERNFADEIN_ON
-    _PNENABLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -116,7 +115,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeWidth: 0.1
+    - _EdgeWidth: 0.026
     - _EnableAddPassLights: 1
     - _EnableDiffraction: 0
     - _EnableGlobalShadow: 1
@@ -138,7 +137,7 @@ Material:
     - _OcclusionStrength: 1
     - _OffsetPFadeIn: 1
     - _OffsetPFadeOut: 0.5
-    - _PNEnable: 1
+    - _PNEnable: 0
     - _PNRotationAngle: 0
     - _PNSampleInClipSpace: 0
     - _PNTextureClip: 0
@@ -187,7 +186,7 @@ Material:
     - _Color: {r: 0.764151, g: 0.21266466, b: 0.21266466, a: 1}
     - _ColorBaseClose: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBaseFar: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorLightDiffraction: {r: 1, g: 0.6, b: 0, a: 1}
+    - _ColorLightDiffraction: {r: 0.38892847, g: 0.7169812, b: 0.69405997, a: 1}
     - _ColorMTextBlack: {r: 1, g: 1, b: 1, a: 1}
     - _ColorMTextWhite: {r: 1, g: 1, b: 1, a: 1}
     - _ColorPNTextBlack: {r: 1, g: 1, b: 1, a: 1}
@@ -195,7 +194,7 @@ Material:
     - _ColorPatternClose: {r: 1, g: 1, b: 1, a: 1}
     - _ColorPatternFar: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     - _ColorShadow: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
-    - _ColorTint: {r: 0.74092203, g: 0.83553976, b: 0.8490566, a: 1}
+    - _ColorTint: {r: 0.9075294, g: 0.8943129, b: 0.9339623, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FakeShadowDirection: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
