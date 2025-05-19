@@ -145,7 +145,7 @@ Shader "Unlit/S_Floor"
                 float3 positionOS : POSITION;
                 float2 texcoord     : TEXCOORD0;
 				float3 normalOS : NORMAL;
-                float4 tangentOS    : TANGENT;
+                float4 tangentOS  : TANGENT;
                 float2 lightmapUV   : TEXCOORD1;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
@@ -153,15 +153,16 @@ Shader "Unlit/S_Floor"
             struct Varyings
             {
                 float2 uv : TEXCOORD0;
-                DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 1);
+                //DECLARE_LIGHTMAP_OR_SH(lightmapUV, vertexSH, 1);
+				float2 lightmapUV : TEXCOORD1;
 				float3 worldCoord : TEXCOORD2;
 				float3 normal : TEXCOORD3;
-				float2 lightmapUV : TEXCOORD4;
+				float3 tangentWS : TEXCOORD4;
+				float3 bitangentWS : TEXCOORD5;
                 float3 posOS : TEXCOORD6;
                 float4 posCS : SV_POSITION;
-                 UNITY_VERTEX_INPUT_INSTANCE_ID
-                    UNITY_VERTEX_OUTPUT_STEREO
-
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             	float4 customLerp(float thresholdA, float thresholdB, float4 ColorA, float4 ColorB, float t)
@@ -218,8 +219,10 @@ Shader "Unlit/S_Floor"
                 o.posOS = v.positionOS.xyz;
                 o.worldCoord =  vertexInput.positionWS;
 
-                VertexNormalInputs normalInput = GetVertexNormalInputs(v.normalOS);
+                VertexNormalInputs normalInput = GetVertexNormalInputs(v.normalOS, v.tangentOS);
                 o.normal = normalInput.normalWS;
+                o.tangentWS = normalInput.tangentWS.xyz;
+                o.bitangentWS = normalInput.bitangentWS.xyz;
                 return o;
             }
 
